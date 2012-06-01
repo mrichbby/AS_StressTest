@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository:repository xmlns:Repository="http://www.tibco.com/xmlns/repo/types/2002">
+    <metaspace>
+        <metaspaceName>Test</metaspaceName>
+        <discoveryUrl>tcp://bby1:50000;bby2:50000</discoveryUrl>
+        <listenUrl/>
+        <designer/>
+        <introspectSpace name="FirstSpace">
+            <spaceConnection name="FirstSpaceConnection">
+                <distributionRole>LEECH</distributionRole>
+            </spaceConnection>
+            <distributionPolicy>DISTRIBUTED</distributionPolicy>
+            <spaceDefTtl>-1</spaceDefTtl>
+            <spaceDefLockTtl>-1</spaceDefLockTtl>
+            <spaceDefLockWait>0</spaceDefLockWait>
+            <capacity>2</capacity>
+            <evictionPolicy>LRU</evictionPolicy>
+            <minimumSeederCount>1</minimumSeederCount>
+            <replicationCount>1</replicationCount>
+            <updateTransport>UNICAST</updateTransport>
+            <persisted>true</persisted>
+            <syncReplicated>false</syncReplicated>
+            <fields>
+                <row>
+                    <name>DateAdded</name>
+                    <fieldtype>DATETIME</fieldtype>
+                    <iskey>false</iskey>
+                    <isnullable>false</isnullable>
+                </row>
+                <row>
+                    <name>Message</name>
+                    <fieldtype>STRING</fieldtype>
+                    <iskey>false</iskey>
+                    <isnullable>false</isnullable>
+                </row>
+                <row>
+                    <name>Destination</name>
+                    <fieldtype>STRING</fieldtype>
+                    <iskey>true</iskey>
+                    <isnullable>false</isnullable>
+                </row>
+            </fields>
+        </introspectSpace>
+    </metaspace>
+</Repository:repository>
